@@ -1,7 +1,7 @@
 # ReSim (Code Coming Soon!)
 PyTorch Implementation of Region Similarity Representation Learning (ReSim)
 
-## Pretrained Models
+## ResNet-50 Pretrained Models
 
 | Checkpoint | MoCo Checkpoint                                                                 | Detectron Backbone                                                                       |
 | ---------- | ------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
