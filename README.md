@@ -27,7 +27,10 @@ This codebase is based on the original [MoCo codebase](https://github.com/facebo
 To pre-train for 200 epochs using the ReSim-FPN implementation as described in the paper:
 
 ```
-python main_moco.py -a resnet50 --lr 0.03 --batch-size 256 --dist-url tcp://localhost:10005 --multiprocessing-distributed --world-size 1 --rank 0 --mlp --moco-t 0.2 --aug-plus --cos --epochs 200 /location/of/imagenet/data/folder
+python main_moco.py -a resnet50 --lr 0.03 --batch-size 256 \
+       --dist-url tcp://localhost:10005 --multiprocessing-distributed --world-size 1 --rank 0 \
+       --mlp --moco-t 0.2 --aug-plus --cos --epochs 200 \
+       /location/of/imagenet/data/folder
 ```
 
 
@@ -56,4 +59,4 @@ python train_net.py --dist-url 'tcp://127.0.0.1:17654' --config-file configs/coc
 
 ## License
 
-This project is under the CC-BY-NC 4.0 license. See [[LICENSE]].
+This project is under the CC-BY-NC 4.0 license. See [LICENSE](./LICENSE).
