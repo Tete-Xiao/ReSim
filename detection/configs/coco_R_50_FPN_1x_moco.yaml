@@ -1,0 +1,16 @@
+_BASE_: "./Base-RCNN-FPN.yaml"
+MODEL:
+  WEIGHTS: "LOAD VIA COMMAND LINE"
+  MASK_ON: True
+  RESNETS:
+    DEPTH: 50
+  PIXEL_MEAN: [123.675, 116.280, 103.530]
+  PIXEL_STD: [58.395, 57.120, 57.375]
+  WEIGHTS: "See Instructions"
+  RESNETS:
+    STRIDE_IN_1X1: False
+    NORM: SyncBN
+  FPN:
+    NORM: SyncBN
+INPUT:
+  FORMAT: "RGB"
