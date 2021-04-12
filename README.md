@@ -1,7 +1,9 @@
 # ReSim 
 
+
+
 <p align="center">
-  <img src="TODO" width="300">
+  <img width="1331" alt="ReSim pipeline" src="https://user-images.githubusercontent.com/1455579/114447371-2f37ac00-9b87-11eb-8423-b0f896197136.png">
 </p>
 
 This repository provides the PyTorch implementation of Region Similarity Representation Learning (ReSim) described in [this paper](https://arxiv.org/abs/2103.12902): 
