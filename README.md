@@ -19,6 +19,17 @@ This repository provides the PyTorch implementation of Region Similarity Represe
 
 tldr; ReSim maintains spatial relationships in the convolutional feature maps when performing instance contrastive pre-training, which is useful for region-related tasks such as object detection, segmentation, and dense pose estimation.
 
+## Installation
+Assuming a conda environment:
+```
+conda create --name resim python=3.7
+conda activate resim
+
+# NOTE: if you are not using CUDA 10.2, you need to change the 10.2 in this command appropriately. 
+# Code tested with torch 1.6 and 1.7
+# (check CUDA version with e.g. `cat /usr/local/cuda/version.txt`)
+conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=10.2 -c pytorch
+```
 
 ## Pre-training
 
