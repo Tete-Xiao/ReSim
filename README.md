@@ -9,7 +9,7 @@
 This repository provides the PyTorch implementation of Region Similarity Representation Learning (ReSim) described in [this paper](https://arxiv.org/abs/2103.12902): 
 
 ```
-@Article{he2019moco,
+@Article{xiao2021region,
   author  = {Tete Xiao and Colorado J Reed and Xiaolong Wang and Kurt Keutzer and Trevor Darrell},
   title   = {Region Similarity Representation Learning},
   journal = {arXiv preprint arXiv:2103.12902},
