@@ -9,7 +9,11 @@
 import warnings
 import torchvision.transforms.functional as F
 
-from torchvision.transforms.transforms import Image, math, random, _get_image_size, _pil_interpolation_to_str
+from torchvision.transforms.transforms import Image, math, random, _pil_interpolation_to_str
+try:
+    from torchvision.transforms.transforms import _get_image_size
+except:
+    from torchvision.transforms.functional import _get_image_size
 
 
 class RandomResizedCrop(object):
