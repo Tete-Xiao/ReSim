@@ -335,26 +335,26 @@ def train(train_loader, model, criterion, optimizer, epoch, args):
 
         # acc1/acc5 are (K+1)-way contrast classifier accuracy
         # measure accuracy and record loss
-        acc1, _ = accuracy(output, target, topk=(1, 5))
+        acc1 = accuracy(output, target, topk=(1,))
         losses.update(loss.item(), images[0].size(0))
         losses_m.update(loss_moco.item(), images[0].size(0))
         losses_d.update(loss_det.item(), images[0].size(0))
         losses_d_c3.update(loss_det_c3.item(), images[0].size(0))
-        top1.update(acc1[0], images[0].size(0))
+        top1.update(acc1[0].item(), images[0].size(0))
 
         valid_ac_ids = torch.where(anchors_labels != -1)[0]
         if valid_ac_ids.shape[0] != 0:
             output_d = output_d[valid_ac_ids]
             anchors_labels = anchors_labels[valid_ac_ids]
-        acc1, _ = accuracy(output_d, anchors_labels, topk=(1, 5))
-        top1_d.update(acc1[0], images[0].size(0))
+        acc1 = accuracy(output_d, anchors_labels, topk=(1,))
+        top1_d.update(acc1[0].item(), images[0].size(0))
 
         valid_ac_ids_c3 = torch.where(anchors_labels_c3 != -1)[0]
         if valid_ac_ids_c3.shape[0] != 0:
             output_d_c3 = output_d_c3[valid_ac_ids_c3]
             anchors_labels_c3 = anchors_labels_c3[valid_ac_ids_c3]
-        acc1_c3, _ = accuracy(output_d_c3, anchors_labels_c3, topk=(1, 5))
-        top1_d_c3.update(acc1_c3[0], images[0].size(0))
+        acc1_c3 = accuracy(output_d_c3, anchors_labels_c3, topk=(1,))
+        top1_d_c3.update(acc1_c3[0].item(), images[0].size(0))
 
         # compute gradient and do SGD step
         optimizer.zero_grad()
